@@ -1,4 +1,4 @@
-const expect = require('chai').expect;
+/*const expect = require('chai').expect;
 const MongoMemoryServer = require('mongodb-memory-server').MongoMemoryServer;
 const mongoose = require('mongoose');
 const Employee = require('../employees.model');
@@ -6,7 +6,7 @@ const Department = require('../department.model');
 
 describe('Employee', () => {
   //tworzymy czasową BD
-/*  before(async () => {
+  before(async () => {
     try {
       const fakeDB = new MongoMemoryServer();
       const uri = await fakeDB.getConnectionString();
@@ -14,7 +14,7 @@ describe('Employee', () => {
     } catch(err) {
       console.log(err);
     }
-  });*/
+  });
 
 
 describe('Reading data', () => {
@@ -46,6 +46,9 @@ describe('Reading data', () => {
 
 after(async () => {
   await Employee.deleteMany();
+});
+after(async () => {
+  await Department.deleteMany();
 });
 });
 
@@ -94,9 +97,9 @@ describe('Updating data', () => {
   console.log(await Employee.find());
   });
 
-/*afterEach(async () => {
+afterEach(async () => {
   await Employee.deleteMany();
-});*/
+});
 
 });
 
@@ -139,3 +142,4 @@ describe('Removing data', () => {
 
 
 });
+*/

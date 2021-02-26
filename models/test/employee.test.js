@@ -1,10 +1,10 @@
-const Employee = require('../employees.model.js');
+/*const Employee = require('../employees.model.js');
 const expect = require('chai').expect;
 const mongoose = require('mongoose');
 
 describe('Employee', () => {
   it('should throw an error if no args', () => {
-    const emp = new Employee({}); 
+    const emp = new Employee({});
 
     emp.validate(err => {
       expect(err.errors.firstName).to.exist;
@@ -41,3 +41,4 @@ describe('Employee', () => {
     });
   });
 });
+*/

@@ -1,4 +1,4 @@
-const expect = require('chai').expect;
+/*const expect = require('chai').expect;
 const MongoMemoryServer = require('mongodb-memory-server').MongoMemoryServer;
 const mongoose = require('mongoose');
 const Department = require('../department.model');
@@ -32,8 +32,9 @@ describe('Reading data', () => {
 
   it('should return a proper document by "name" with "findOne" method', async () => {
   const department = await Department.findOne({ name: 'Department #1' });
+  console.log(department);
   const expectedName = 'Department #1';
-  expect(department.name).to.be.equal('Department #1');
+  expect(department.name).to.be.equal(expectedName);
 });
 
 after(async () => {
@@ -79,10 +80,7 @@ describe('Updating data', () => {
   });
 
   it('should properly update multiple documents with "updateMany" method', async () => {
-  /*  await Department.updateMany({}, { $set: { name: 'Updated!' }});
-      const departments = await Department.find();
-      expect(departments[0].name).to.be.equal('Updated!');
-      expect(departments[1].name).to.be.equal('Updated!');*/
+
       await Department.updateMany({}, { $set: { name: 'Updated!' }});
       const departments = await Department.find({ name: 'Updated!' });
       expect(departments.length).to.be.equal(2);
@@ -136,3 +134,4 @@ describe('Removing data', () => {
 
 
 });
+*/
